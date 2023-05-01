@@ -15,3 +15,7 @@ NOTE:
    let course = 'Next level developer'; --> Implicit
 
 2.
+
+SHORT QUESTION:
+
+1. TypeScript is a syntactic superset of JavaScript which adds static typing.

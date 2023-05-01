@@ -1,3 +1,4 @@
+// Need to discuss about this function
 function generateAdder(a: number): (b: number) => number {
   return function (b: number) {
     return a + b;

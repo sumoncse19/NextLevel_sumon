@@ -6,7 +6,7 @@
   "author": "Md. Sumon",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only index.ts"
+    "start": "ts-node-dev --respawn --transpile-only"
   },
   "devDependencies": {
     "nodemon": "^2.0.22",

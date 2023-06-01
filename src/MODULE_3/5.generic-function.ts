@@ -39,4 +39,5 @@ const createSpread = <T>(myInfo: T) => {
 }
 
 const result5 = createSpread(myInfo)
-result5.crush
+result5
+console.log(result5), 'here result5 is';

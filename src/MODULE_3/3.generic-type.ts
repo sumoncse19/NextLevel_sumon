@@ -15,6 +15,10 @@ const idNumbers3: GenericArray<boolean> = [true, false, false];
 type NameRollType = {
   name: string, id: number
 }
+interface NameRollInterface {
+  name: string,
+  id: number
+}
 // const userNameAndRollNumbers: GenericArray<{ name: string, id: number }> = [{ name: 'sumon', id: 1 }, { name: 'rahim', id: 2 },]
 const userNameAndRollNumbers: GenericArray<NameRollType> = [{ name: 'sumon', id: 1 }, { name: 'rahim', id: 2 },]
 
@@ -32,6 +36,10 @@ const relationWithObjectDeclare: GenericTuple<{ name: string, salary: number }, 
 }, 'Sanjana',]
 
 const relationWithObjectDeclare2: GenericTuple<NameRollType, string> = [{
+  name: 'Sumon',
+  id: 10,
+}, 'Sanjana',]
+const relationWithObjectDeclare3: GenericTuple<NameRollInterface, string> = [{
   name: 'Sumon',
   id: 10,
 }, 'Sanjana',]

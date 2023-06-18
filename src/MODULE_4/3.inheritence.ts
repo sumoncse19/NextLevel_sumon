@@ -26,7 +26,7 @@ class StudentTeacher {
 
 
 class Student extends StudentTeacher {
-  constructor(public name: string, public age: number, public address: string) {
+  constructor(name: string, age: number, address: string) {
     super(name, age, address);
   }
 }
@@ -34,27 +34,27 @@ const student1 = new Student('Mr. X', 25, 'Uganda')
 
 
 class Teacher extends StudentTeacher {
-  designation: string;
-  constructor(name: string, age: number, address: string, designation: string) {
+  // designation: string;
+  constructor(name: string, age: number, address: string, public designation: string) {
     super(name, age, address)
-    this.designation = designation
+    // this.designation = designation
   }
 
-  takeClass(noOfClass: number): string {
-    return `This ${this.name} teacher will took ${noOfClass} classes.`
+  takeClass(numOfClass: number): string {
+    return `This ${this.name} teacher will took ${numOfClass} classes.`
   }
 }
 const teacher1 = new Teacher('Mr. Y', 54, 'Uganda', 'Teacher')
 
-class TeacherWithShort extends StudentTeacher {
-  constructor(name: string, age: number, address: string, public designation: string) {
-    super(name, age, address)
+class TeacherWithShort extends Teacher {
+  constructor(name: string, age: number, address: string, designation: string) {
+    super(name, age, address, designation)
   }
 
-  takeClass(noOfClass: number): string {
-    return `This ${this.name} teacher will took ${noOfClass} classes.`
+  takeClass(numOfClass: number): string {
+    return `This ${this.name} teacher will took ${numOfClass} classes.`
   }
 }
-const teacher2 = new TeacherWithShort('Mr. Y', 54, 'Uganda', 'Teacher')
+const teacher2 = new TeacherWithShort('Mr. z', 54, 'Uganda', 'Teacher')
 
 console.log(student1, teacher1, teacher2);

@@ -1,12 +1,20 @@
-// run ts file after convert to js file -->
+1. tsc --init
+2. npm init -y
 
-1. install: yarn add -D nodemon
-2. "start": "nodemon index.js"
+// run ts file after convert to js file --> 3. install: yarn add -D nodemon
 
-// for run ts file without convert to js file -->
+"start": "nodemon index.js"
 
-1. install: yarn add ts-node-dev
-2. "start": "ts-node-dev --respawn --transpile-only index.ts"
+// for run ts file without convert to js file --> 4. install: yarn add ts-node-dev 5. yarn add --dev typescript
+"start": "ts-node-dev --respawn --transpile-only index.ts"
+
+"scripts": {
+"start": "ts-node-dev --respawn --transpile-only",
+"dev": "npx ts-node-dev --respawn --transpile-only"
+},
+
+"rootDir": "./src",
+"outDir": "./dist",
 
 NOTE:
 

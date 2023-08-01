@@ -13,6 +13,8 @@ class BankAccount {
 
 class StudentAccount extends BankAccount {
   test() {
+    // this._balance = 0 // We can't access it --> Property '_balance' is private and only accessible within class 'BankAccount' --> But protected use korle access korte parbo.
+    // Jemon age er age protected use korsi.
     console.log(`Everything can access without private: ${this.age}`);
   }
 }

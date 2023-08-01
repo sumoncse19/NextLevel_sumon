@@ -29,3 +29,4 @@ const person: {
     // return `My New Balance is ${this.balance + money}`; // --> এক্ষেত্রে return type string.
   }
 }
+export { }

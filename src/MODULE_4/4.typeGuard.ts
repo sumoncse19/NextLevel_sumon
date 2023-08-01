@@ -22,7 +22,10 @@ type AdminUserType = {
   role: 'admin',
 }
 
-function getUserType(user: NormalUserType | AdminUserType) {
+const normalUser1: NormalUserType = { name: 'Mr. Kallu' }
+const adminUser1: AdminUserType = { name: 'Mr. Gallu', role: 'admin' }
+
+function getUserType(user: NormalUserType | AdminUserType): string {
   if ('role' in user) {
     return `I am an admin and my role is ${user.role}`
   } else {
@@ -30,13 +33,8 @@ function getUserType(user: NormalUserType | AdminUserType) {
   }
 }
 
-const normalUser1: NormalUserType = { name: 'Mr. Kallu' }
-const adminUser1: AdminUserType = { name: 'Mr. Gallu', role: 'admin' }
-
 console.log(getUserType(normalUser1));
 console.log(getUserType(adminUser1));
-
-
 
 // instance of guard
 class AnimalNew {
@@ -68,6 +66,11 @@ class Cat extends AnimalNew {
   }
 }
 
+// Create instance
+const animal1 = new Dog('German Bhai', 'Dog');  // instance --> dog
+const animal2 = new Cat('Persian Bhai', 'Cat'); // instance --> cat
+
+// For checking type through function
 function isDog(animal: AnimalNew): animal is Dog {
   return animal instanceof Dog;
 }
@@ -77,6 +80,7 @@ function isCat(animal: AnimalNew): animal is Cat {
 }
 
 function getAnimal(animal: AnimalNew) {
+  // isDog(animal) --> Checking type through function
   if (isDog(animal)) {
     animal.makeBark()
   } else if (animal instanceof Cat) {
@@ -85,9 +89,6 @@ function getAnimal(animal: AnimalNew) {
     animal.makeSound()
   }
 }
-
-const animal1 = new Dog('German Bhai', 'Dog');  // instance --> dog
-const animal2 = new Cat('Persian Bhai', 'Cat'); // instance --> cat
 
 getAnimal(animal1)
 getAnimal(animal2)
